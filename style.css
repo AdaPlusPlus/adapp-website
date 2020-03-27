@@ -19,7 +19,9 @@ body {
  ** Mobile Portrait **
  *********************/
 
-/* This mode is difficult to test and full of hacks.. */
+/* This mode is difficult to test and full of hacks..
+   For example, .mobile is set in utils.js and is a giant regex if statement.
+*/
 
 /* Make the nav readable */
 @media (orientation: portrait) {
