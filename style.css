@@ -48,8 +48,7 @@ body {
     padding-left: 35px;
     padding-right: 35px;
     min-width: 0px;
-    zoom: 2.0; 
-    -moz-transform: scale(2.0);
+    transform: scale(2.0);
     width: 100%;
     padding: 0;
   }
