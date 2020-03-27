@@ -43,6 +43,8 @@ body {
   }
 
   .mobile #content {
+    zoom: 1.4; 
+    -moz-transform: scale(1.4);
     padding-top: 160px;
     padding-bottom: 150px;
     padding-left: 35px;
