@@ -43,12 +43,15 @@ body {
   }
 
   .mobile #content {
-    zoom: 1.4; 
-    -moz-transform: scale(1.4);
     padding-top: 160px;
     padding-bottom: 150px;
     padding-left: 35px;
     padding-right: 35px;
+    min-width: 0px;
+    zoom: 2.0; 
+    -moz-transform: scale(2.0);
+    width: 100%;
+    padding: 0;
   }
 
   /* Disable the download button and footer */
