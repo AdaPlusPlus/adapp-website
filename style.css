@@ -19,6 +19,8 @@ body {
  ** Mobile Portrait **
  *********************/
 
+/* This mode is difficult to test and full of hacks.. */
+
 /* Make the nav readable */
 @media (orientation: portrait) {
 
@@ -42,6 +44,7 @@ body {
     -moz-transform: scale(1.4);
   }
 
+  /* Make the make content just take the full space to make things easy style-wise */
   .mobile #content {
     padding-top: 160px;
     padding-bottom: 150px;
@@ -51,7 +54,7 @@ body {
     font-size: 200%;
   }
 
-  /* Disable the download button and footer */
+  /* Disable the download button and footer, since we just don't have room */
   .mobile #header .button.download {
     visibility: hidden;
   }
@@ -68,8 +71,6 @@ body {
  ************/
 
 #header {
-
-  /* Center the banner (not quite so easy...) */
   top: 0%;
   left: 0;
   width: 100%;
@@ -81,7 +82,11 @@ body {
   position: fixed;
 }
 
-/* Master grid for navigation controlling all spacing */
+#header .logo img {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
 #header .nav {
   min-width: 750px;
   max-width: 1100px;
@@ -89,16 +94,10 @@ body {
   margin-right: auto;
   display: flex;
 }
-
 #header .nav .buttons {
   flex: 2;
   display: flex;
   justify-content: flex-end;
-}
-
-#header .logo img {
-  margin-top: 10px;
-  margin-left: 5px;
 }
 
 /* Buttons for main navigation */
