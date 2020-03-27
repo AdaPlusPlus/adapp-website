@@ -48,6 +48,8 @@ body {
     padding-left: 35px;
     padding-right: 35px;
     min-width: 0px;
+    -moz-transform: scale(2.0);
+    -webkit-transform: scale(2.0);
     transform: scale(2.0);
     width: 100%;
     padding: 0;
