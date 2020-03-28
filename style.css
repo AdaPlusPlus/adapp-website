@@ -15,6 +15,14 @@ body {
   background-color: #F0F0F0;
 }
 
+/**********************
+ ** Mobile Landscape **
+ **********************/
+
+@media (orientation: landscape) {
+  .mobile #footer{ display: none; }
+}
+
 /*********************
  ** Mobile Portrait **
  *********************/
