@@ -7,7 +7,6 @@
     <link rel="shortcut icon" href="logo-compact-no-pp.svg"/>
   </head>
   <body>
-    <script src="utils.js"> </script>
 
   <!------------
     -- Header --
@@ -25,8 +24,8 @@
         </div>
 
         <!-- Release download link -->
-        <a href="github.com"> 
-          <div class="button download"> Download &nbsp; <img src="icon-download.svg"/> </div>
+        <a href="https://github.com/AdaPlusPlus/adapp-compiler"> 
+          <div id="download" class="button juicy"> Download &nbsp; <img src="icon-download.svg"/> </div>
         </a>
       </div>
     </div>
@@ -38,130 +37,298 @@
     <div id="content">
 
 <!-- Content area ------------------------------------------------------------------------------------------------------->
+<div>
+  <h2>Contents</h2>
+  <hr>
+  <ol>
+    <li><a href="#forward">About this tutorial and Forward</a></li>
+    <li><a href="#code-structure">Code Structure</a></li>
+    <li><a href="#packages">Packages</a></li>
+    <li><a href="#control-statements">Control Statements</a></li>
+    <li><a href="#conditions">Conditions</a></li>
+  </ol>
+</div>
 
-      <p>
-        Fugiat cupidatat ea velit cillum elit cillum aute nostrud aliquip veniam ea aliqua officia labore.
-      </p>
-      <p>
-        Nostrud cupidatat sed quis sunt tempor dolor cupidatat mollit commodo mollit mollit anim consequat aliquip 
-        irure laborum eiusmod commodo ullamco sunt amet id ex nostrud laborum dolor in laborum eiusmod fugiat pariatur
-        fugiat tempor veniam est elit veniam consectetur in dolor est cillum consectetur ut voluptate laborum et fugiat 
-        irure officia aliqua dolore id ad in eiusmod occaecat sunt aliquip proident ea magna laborum dolor laboris 
-        laboris dolore cillum ullamco id do eiusmod culpa irure in id duis do dolore voluptate ut pariatur pariatur 
-        mollit sint nisi consequat velit magna mollit ea veniam nulla sunt et nulla magna reprehenderit tempor id 
-        est ad dolor cupidatat cupidatat ad ut cillum non veniam incididunt aute commodo culpa qui cillum sint est 
-        ut eu in exercitation magna culpa et adipisicing quis in ut voluptate non pariatur anim quis est anim sed 
-        minim occaecat ad dolor pariatur id tempor in quis sed minim quis do fugiat amet ut eiusmod in sit nisi 
-        pariatur fugiat eiusmod dolor consectetur enim aliqua tempor irure do et labore ea veniam adipisicing id 
-        sint eiusmod sit qui aute reprehenderit deserunt tempor pariatur tempor ullamco non ex sit adipisicing 
-        proident excepteur aliqua dolor reprehenderit ut labore do ut laborum deserunt anim cupidatat excepteur 
-        incididunt commodo quis aliqua anim laborum laboris tempor ea consectetur ut in id culpa labore.
-      </p>
-      <p>
-        Nostrud cupidatat sed quis sunt tempor dolor cupidatat mollit commodo mollit mollit anim consequat aliquip 
-        irure laborum eiusmod commodo ullamco sunt amet id ex nostrud laborum dolor in laborum eiusmod fugiat pariatur
-        fugiat tempor veniam est elit veniam consectetur in dolor est cillum consectetur ut voluptate laborum et fugiat 
-        irure officia aliqua dolore id ad in eiusmod occaecat sunt aliquip proident ea magna laborum dolor laboris 
-        laboris dolore cillum ullamco id do eiusmod culpa irure in id duis do dolore voluptate ut pariatur pariatur 
-        mollit sint nisi consequat velit magna mollit ea veniam nulla sunt et nulla magna reprehenderit tempor id 
-        est ad dolor cupidatat cupidatat ad ut cillum non veniam incididunt aute commodo culpa qui cillum sint est 
-        ut eu in exercitation magna culpa et adipisicing quis in ut voluptate non pariatur anim quis est anim sed 
-        minim occaecat ad dolor pariatur id tempor in quis sed minim quis do fugiat amet ut eiusmod in sit nisi 
-        pariatur fugiat eiusmod dolor consectetur enim aliqua tempor irure do et labore ea veniam adipisicing id 
-        sint eiusmod sit qui aute reprehenderit deserunt tempor pariatur tempor ullamco non ex sit adipisicing 
-        proident excepteur aliqua dolor reprehenderit ut labore do ut laborum deserunt anim cupidatat excepteur 
-        incididunt commodo quis aliqua anim laborum laboris tempor ea consectetur ut in id culpa labore.
-      </p>
-      <p>
-        Nostrud cupidatat sed quis sunt tempor dolor cupidatat mollit commodo mollit mollit anim consequat aliquip 
-        irure laborum eiusmod commodo ullamco sunt amet id ex nostrud laborum dolor in laborum eiusmod fugiat pariatur
-        fugiat tempor veniam est elit veniam consectetur in dolor est cillum consectetur ut voluptate laborum et fugiat 
-        irure officia aliqua dolore id ad in eiusmod occaecat sunt aliquip proident ea magna laborum dolor laboris 
-        laboris dolore cillum ullamco id do eiusmod culpa irure in id duis do dolore voluptate ut pariatur pariatur 
-        mollit sint nisi consequat velit magna mollit ea veniam nulla sunt et nulla magna reprehenderit tempor id 
-        est ad dolor cupidatat cupidatat ad ut cillum non veniam incididunt aute commodo culpa qui cillum sint est 
-        ut eu in exercitation magna culpa et adipisicing quis in ut voluptate non pariatur anim quis est anim sed 
-        minim occaecat ad dolor pariatur id tempor in quis sed minim quis do fugiat amet ut eiusmod in sit nisi 
-        pariatur fugiat eiusmod dolor consectetur enim aliqua tempor irure do et labore ea veniam adipisicing id 
-        sint eiusmod sit qui aute reprehenderit deserunt tempor pariatur tempor ullamco non ex sit adipisicing 
-        proident excepteur aliqua dolor reprehenderit ut labore do ut laborum deserunt anim cupidatat excepteur 
-        incididunt commodo quis aliqua anim laborum laboris tempor ea consectetur ut in id culpa labore.
-      </p>
-      <p>
-        Nostrud cupidatat sed quis sunt tempor dolor cupidatat mollit commodo mollit mollit anim consequat aliquip 
-        irure laborum eiusmod commodo ullamco sunt amet id ex nostrud laborum dolor in laborum eiusmod fugiat pariatur
-        fugiat tempor veniam est elit veniam consectetur in dolor est cillum consectetur ut voluptate laborum et fugiat 
-        irure officia aliqua dolore id ad in eiusmod occaecat sunt aliquip proident ea magna laborum dolor laboris 
-        laboris dolore cillum ullamco id do eiusmod culpa irure in id duis do dolore voluptate ut pariatur pariatur 
-        mollit sint nisi consequat velit magna mollit ea veniam nulla sunt et nulla magna reprehenderit tempor id 
-        est ad dolor cupidatat cupidatat ad ut cillum non veniam incididunt aute commodo culpa qui cillum sint est 
-        ut eu in exercitation magna culpa et adipisicing quis in ut voluptate non pariatur anim quis est anim sed 
-        minim occaecat ad dolor pariatur id tempor in quis sed minim quis do fugiat amet ut eiusmod in sit nisi 
-        pariatur fugiat eiusmod dolor consectetur enim aliqua tempor irure do et labore ea veniam adipisicing id 
-        sint eiusmod sit qui aute reprehenderit deserunt tempor pariatur tempor ullamco non ex sit adipisicing 
-        proident excepteur aliqua dolor reprehenderit ut labore do ut laborum deserunt anim cupidatat excepteur 
-        incididunt commodo quis aliqua anim laborum laboris tempor ea consectetur ut in id culpa labore.
-      </p>
-      <p>
-        Nostrud cupidatat sed quis sunt tempor dolor cupidatat mollit commodo mollit mollit anim consequat aliquip 
-        irure laborum eiusmod commodo ullamco sunt amet id ex nostrud laborum dolor in laborum eiusmod fugiat pariatur
-        fugiat tempor veniam est elit veniam consectetur in dolor est cillum consectetur ut voluptate laborum et fugiat 
-        irure officia aliqua dolore id ad in eiusmod occaecat sunt aliquip proident ea magna laborum dolor laboris 
-        laboris dolore cillum ullamco id do eiusmod culpa irure in id duis do dolore voluptate ut pariatur pariatur 
-        mollit sint nisi consequat velit magna mollit ea veniam nulla sunt et nulla magna reprehenderit tempor id 
-        est ad dolor cupidatat cupidatat ad ut cillum non veniam incididunt aute commodo culpa qui cillum sint est 
-        ut eu in exercitation magna culpa et adipisicing quis in ut voluptate non pariatur anim quis est anim sed 
-        minim occaecat ad dolor pariatur id tempor in quis sed minim quis do fugiat amet ut eiusmod in sit nisi 
-        pariatur fugiat eiusmod dolor consectetur enim aliqua tempor irure do et labore ea veniam adipisicing id 
-        sint eiusmod sit qui aute reprehenderit deserunt tempor pariatur tempor ullamco non ex sit adipisicing 
-        proident excepteur aliqua dolor reprehenderit ut labore do ut laborum deserunt anim cupidatat excepteur 
-        incididunt commodo quis aliqua anim laborum laboris tempor ea consectetur ut in id culpa labore.
-      </p>
-      <p>
-        Nostrud cupidatat sed quis sunt tempor dolor cupidatat mollit commodo mollit mollit anim consequat aliquip 
-        irure laborum eiusmod commodo ullamco sunt amet id ex nostrud laborum dolor in laborum eiusmod fugiat pariatur
-        fugiat tempor veniam est elit veniam consectetur in dolor est cillum consectetur ut voluptate laborum et fugiat 
-        irure officia aliqua dolore id ad in eiusmod occaecat sunt aliquip proident ea magna laborum dolor laboris 
-        laboris dolore cillum ullamco id do eiusmod culpa irure in id duis do dolore voluptate ut pariatur pariatur 
-        mollit sint nisi consequat velit magna mollit ea veniam nulla sunt et nulla magna reprehenderit tempor id 
-        est ad dolor cupidatat cupidatat ad ut cillum non veniam incididunt aute commodo culpa qui cillum sint est 
-        ut eu in exercitation magna culpa et adipisicing quis in ut voluptate non pariatur anim quis est anim sed 
-        minim occaecat ad dolor pariatur id tempor in quis sed minim quis do fugiat amet ut eiusmod in sit nisi 
-        pariatur fugiat eiusmod dolor consectetur enim aliqua tempor irure do et labore ea veniam adipisicing id 
-        sint eiusmod sit qui aute reprehenderit deserunt tempor pariatur tempor ullamco non ex sit adipisicing 
-        proident excepteur aliqua dolor reprehenderit ut labore do ut laborum deserunt anim cupidatat excepteur 
-        incididunt commodo quis aliqua anim laborum laboris tempor ea consectetur ut in id culpa labore.
-      </p>
-      <p>
-        Nostrud cupidatat sed quis sunt tempor dolor cupidatat mollit commodo mollit mollit anim consequat aliquip 
-        irure laborum eiusmod commodo ullamco sunt amet id ex nostrud laborum dolor in laborum eiusmod fugiat pariatur
-        fugiat tempor veniam est elit veniam consectetur in dolor est cillum consectetur ut voluptate laborum et fugiat 
-        irure officia aliqua dolore id ad in eiusmod occaecat sunt aliquip proident ea magna laborum dolor laboris 
-        laboris dolore cillum ullamco id do eiusmod culpa irure in id duis do dolore voluptate ut pariatur pariatur 
-        mollit sint nisi consequat velit magna mollit ea veniam nulla sunt et nulla magna reprehenderit tempor id 
-        est ad dolor cupidatat cupidatat ad ut cillum non veniam incididunt aute commodo culpa qui cillum sint est 
-        ut eu in exercitation magna culpa et adipisicing quis in ut voluptate non pariatur anim quis est anim sed 
-        minim occaecat ad dolor pariatur id tempor in quis sed minim quis do fugiat amet ut eiusmod in sit nisi 
-        pariatur fugiat eiusmod dolor consectetur enim aliqua tempor irure do et labore ea veniam adipisicing id 
-        sint eiusmod sit qui aute reprehenderit deserunt tempor pariatur tempor ullamco non ex sit adipisicing 
-        proident excepteur aliqua dolor reprehenderit ut labore do ut laborum deserunt anim cupidatat excepteur 
-        incididunt commodo quis aliqua anim laborum laboris tempor ea consectetur ut in id culpa labore.
-      </p>
-      <p>
-        Nostrud cupidatat sed quis sunt tempor dolor cupidatat mollit commodo mollit mollit anim consequat aliquip 
-        irure laborum eiusmod commodo ullamco sunt amet id ex nostrud laborum dolor in laborum eiusmod fugiat pariatur
-        fugiat tempor veniam est elit veniam consectetur in dolor est cillum consectetur ut voluptate laborum et fugiat 
-        irure officia aliqua dolore id ad in eiusmod occaecat sunt aliquip proident ea magna laborum dolor laboris 
-        laboris dolore cillum ullamco id do eiusmod culpa irure in id duis do dolore voluptate ut pariatur pariatur 
-        mollit sint nisi consequat velit magna mollit ea veniam nulla sunt et nulla magna reprehenderit tempor id 
-        est ad dolor cupidatat cupidatat ad ut cillum non veniam incididunt aute commodo culpa qui cillum sint est 
-        ut eu in exercitation magna culpa et adipisicing quis in ut voluptate non pariatur anim quis est anim sed 
-        minim occaecat ad dolor pariatur id tempor in quis sed minim quis do fugiat amet ut eiusmod in sit nisi 
-        pariatur fugiat eiusmod dolor consectetur enim aliqua tempor irure do et labore ea veniam adipisicing id 
-        sint eiusmod sit qui aute reprehenderit deserunt tempor pariatur tempor ullamco non ex sit adipisicing 
-        proident excepteur aliqua dolor reprehenderit ut labore do ut laborum deserunt anim cupidatat excepteur 
-        incididunt commodo quis aliqua anim laborum laboris tempor ea consectetur ut in id culpa labore.
-      </p>
+
+<!-- Section ---------------------------------------------------------------------------------------------------------->
+
+<div class="section">
+  <h2 id="forward">About this tutorial and Forward</h2>
+  <hr>
+  <p>
+    The following original tutorial was written by Quentin Ochem and published by AdaCore 
+    and has been adapted to use the optional Ada++ syntax. So please report/attribute any 
+    errors to our Github page
+    <br/>
+    <br/>
+    <i>
+      See the full original version
+      <a href="https://www.Adacore.com/uploads_gems/Ada_for_the_C++_or_Java_Developer-cc.pdf"> here </a>
+    </i>.
+  </p>
+
+  <p>
+    Ada++ is truly a general purpose, multiple paradigm language that allows the programmer to
+    employ or avoid features like run-time contract checking, tasking, object oriented programming,
+    and generics. Efficiently programmed Ada++ is employed in device drivers, interrupt handlers,
+    and other low-level functions. It may be found today in devices with tight limits on processing
+    speed, memory, and power consumption. But the language is also used for programming larger 
+    interconnected systems running on workstations, servers, and supercomputers.
+  </p>
+</div>
+
+
+<!-- Section ---------------------------------------------------------------------------------------------------------->
+
+<div class="section">
+  <h2 id="code-structure">Code structure</h2>
+  <hr>
+  <p>
+    C++ programming style usually promotes the use of two distinct files: header files used to define
+    specifications (.h, .hxx, .hpp), and implementation files which contain the executable code 
+    (.c, .cxx, .cpp). However, the distinction between specification and implementation is not enforced
+    by the compiler and may need to be worked round in order to implement, for example, inlining or 
+    templates.
+  </p>
+  <p>
+    Ada++ is superficially similar to the C++ case: Ada++ compilation units are generally split into 
+    two parts, the specification and the body. However, what goes into those files is more predictable
+    for both the compiler and for the programmer. With GNAT, compilation units are stored in files 
+    with a .ads extension for specifications and with a .adb extension for implementations.
+  </p>
+  <p>
+    Without further ado, we present the famous “Hello World” in three languages for comparison:
+  </p>
+
+  <h4>Ada++</h4>
+<pre class="prettyprint linenums lang-adapp">
+use Ada.Wide_Text_IO;
+proc Main:
+{
+  Put_Line ("Hello World");
+}
+</pre>
+
+  <h4>C++</h4>
+<pre class="prettyprint linenums lang-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+int main(int argc, const char* argv[]) {
+  cout << "Hello World" << endl;
+}
+</pre>
+
+  <h4>Java</h4>
+<pre class="prettyprint linenums lang-java">
+public class Main {
+  public static void main(String [] argv) {
+    System.out.println ("Hello World");
+  }
+}
+</pre>
+
+</div>
+
+<!-- Section ---------------------------------------------------------------------------------------------------------->
+
+<div class="section">
+  <h2 id="packages">Packages</h2>
+  <hr>
+  <p>
+    The first line of Ada++ we see is the with clause, declaring that the unit (in this case, 
+    the Main subprogram) will require the services of the package Ada.Text_IO. 
+    This is different from how #include works in C++ in that it does not, in a logical sense,
+    copy/paste the code of Ada.Text_IO into Main. The with clause directs the compiler to make
+    the public interface of the Ada.Text_IO package visible to code in the unit (here Main)
+    containing the with clause.
+  </p>
+  <p>
+    The use clause is the equivalent of using namespace in C++, or import in Java (though it 
+    wasn’t necessary to use import in the Java example above). It allows you to omit the full 
+    package name when referring to withed units. Without the use clause, any reference to 
+    Ada.Text_IO items would have had to be fully qualified with the package name. The Put_Line 
+    line would then have read: <i>Ada.Text_IO.Put_Line ("Hello World");</i>
+  </p>
+  <p>
+    The word <b>“package”</b> has different meanings in Ada++ and Java. In Java, a package is 
+    used as a namespace for classes. In Ada++, it’s often a compilation unit. As a result Ada++
+    tends to have many more packages than Java. Ada++ package specifications 
+    (“package specs” for short) have the following structure:
+  </p>
+
+  <h4>Package Specification - similar to a C++ header or Java interface</h4>
+<pre class="prettyprint linenums lang-adapp">
+-- Hello world example
+pkg Package_Name {
+  -- Public declarations
+priv
+  -- Private declarations
+}
+</pre>
+
+  <h4>Package Body</h4>
+<pre class="prettyprint linenums lang-adapp">
+-- Hello world example
+pkg body Package_Name {
+  -- Implementation
+}
+</pre>
+
+  <p>
+    The <b>private</b> reserved word is used to mark the start of the private portion of a package 
+    spec. By splitting the package spec into private and public parts, it is possible to make an 
+    entity available for use while hiding its implementation. For instance, a common use is declaring 
+    a record (Ada++’s struct) whose fields are only visible to its package and not to the caller. 
+    This allows the caller to refer to objects of that type, but not to change any of its contents 
+    directly. The package body contains implementation code, and is only accessible to outside code 
+    through declarations in the package spec.
+  </p>
+</div>
+
+<!-- Section ---------------------------------------------------------------------------------------------------------->
+
+<div class="section">
+  <h2 id="control-statements"> Control Statements </h2>
+  <hr>
+  <p>
+    Ada++ requires variable declarations to be made in a specific area called the declarative part,
+    seen here before the begin keyword. Variable declarations start with the identifier in Ada++, 
+    as opposed to starting with the type as in C++ and Java (also note Ada++’s use of the : separator).
+    Specifying initializers is different as well: in Ada++ an initialization expression can apply to 
+    multiple variables (but will be evaluated separately for each), whereas in C++ and Java each 
+    variable is initialized individually. In all three languages, if you use a function as an 
+    initializer and that function returns different values on every invocation, each variable will 
+    get initialized to a different value.
+  </p>
+
+  <h4>Ada++</h4>
+<pre class="prettyprint linenums lang-adapp">
+--
+-- Declares and modifies Ints
+--
+proc Main: -- In Ada++ "is" can now be replaced with a colon
+  -- Variable declarations
+  A, B : Int := 0;
+  C : Int := 100;
+  D : Int;
+{
+  -- Ada uses a regular assignment statement for incrementation.
+  -- However, Ada++ will support a "++" "-1" and "+1" operators
+  -- in coming revisions.
+  A := A + 1; -- ++ operator coming soon!
+  -- Regular addition
+  D := A + B + C;
+}
+</pre>
+
+  <h4>C++</h4>
+<pre class="prettyprint linenums lang-cpp">
+/*
+ * Declares and modifies ints
+ */
+int main (int argc, const char* argv[]) {
+  // Variable declarations
+  int a = 0, b = 0, c = 100, d;
+
+  // C++ shorthand for incrementation
+  a++;
+
+  // Regular addition
+  d := a + b + c;
+}
+</pre>
+
+
+  <h4>Java</h4>
+<pre class="prettyprint linenums lang-java">
+/*
+ * Declares and modifies ints
+ */
+public class Main {
+  public static void main(String [] argv) {
+    // Variable declarations
+    int a = 0, b = 0, c = 100, d;
+
+    // Java shorthand for incrementation
+    a++;
+
+    // Regular addition
+    d := a + b + c;
+  }
+}
+</pre>
+</div>
+
+<!-- Section ---------------------------------------------------------------------------------------------------------->
+
+<div class="section">
+  <h2 id="conditions"> Conditions </h2>
+  <hr>
+  <p>
+  In Ada++, everything that appears between the <i>if</i> and <i>{</i> is the conditional 
+  expression—no parentheses required. Comparison operators are the same, except for equality (=) 
+  and inequality (/=). The english words not, and, and or replace the symbols !, &, and |, 
+  respectively, for performing boolean operations.
+  </p>
+
+
+  <h4>Ada++</h4>
+<pre class="prettyprint linenums lang-adapp">
+if Variable > 0 {
+  Put_Line (" > 0");
+elsif Variable < 0 {
+  Put_Line (" < 0");
+else
+  Put_Line (" = 0");
+}
+</pre>
+
+  <h4>C++</h4>
+<pre class="prettyprint linenums lang-cpp">
+if (Variable > 0) {
+  cout << " > 0" << endl;
+} else if (Variable < 0) {
+  cout << " < 0" << endl;
+} else {
+  cout << " = 0" << endl;
+}
+</pre>
+
+  <h4>Java</h4>
+<pre class="prettyprint linenums lang-java">
+if (Variable > 0) {
+  System.out.println(" > 0");
+} else if (Variable < 0) {
+  System.out.println(" < 0");
+} else {
+  System.out.println(" = 0");
+}
+</pre>
+
+  <p>
+    It’s more customary to use && and || in C++ and Java than & and | when writing boolean 
+    expressions. The difference is that && and || are short-circuit operators, which evaluate 
+    terms only as necessary, and & and | will unconditionally evaluate all terms. In Ada++, and 
+    and or will evaluate all terms; and then and or else direct the compiler to employ short circuit 
+    evaluation.
+  </p>
+</div>
+<br/>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="section">
+  <center><h1>More coming soon!</h1></center>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
 <!-- End of content area --------------------------------------------------------------------------------------------------->
 
@@ -173,11 +340,12 @@
 
     <div id="footer">
       <img src="logo-compact-grey.svg" width="40" height="40"/>
-      <a href="branding.html"> <div class="button"> BRANDING </div> </a>
-      <a href="https://github.com/AdaPlusPlus"> <div class="button"> GITHUB </div> </a>
+      <a href="https://github.com/Ada++PlusPlus"> <div class="button"> GITHUB </div> </a>
       <a href="contact.html"> <div class="button"> CONTACT </div> </a>
     </div>
+
+    <script src="code-prettify/run_prettify.js?skin=sunburst"></script>
+    <script src="code-prettify/lang-adapp.js"></script>
+    <script src="utils.js"></script>
   </body>
 </html>
-
-

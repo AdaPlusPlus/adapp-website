@@ -9,11 +9,12 @@ a {
 }
 * {
   box-sizing: border-box;
-  font-family: sans-serif;
 }
 body {
   background-color: #F0F0F0;
+  font-family: sans-serif;
 }
+
 
 /**********************
  ** Mobile Landscape **
@@ -34,6 +35,9 @@ body {
 /* Make the nav readable */
 @media (orientation: portrait) {
 
+  .codezone {
+    border-radius: 0px;
+  }
   .mobile #header {
     height: 148px;
   }
@@ -129,19 +133,9 @@ body {
   color: #000000;
 }
 
-/* The download button is special */
-#header .button.download {
+.button.juicy {
   border-radius: 10px 10px 10px 10px;
-  height: 60px;
-  width: 140px;
-  color: #FFFFFF;
-
-  /* Push some pixels around so the download icon lines up with button text */
-  padding-left: 3%;
-  padding-top: 2%;
-  margin-top: 18px;
-  margin-left: 8px;
-  margin-right: 8px;
+  color: #FFFFFF !important;
   
   /* Give the button that "juicy" look */
   background-image: linear-gradient(#289A54, #38AA64, #289A54);
@@ -150,6 +144,17 @@ body {
   -o-box-shadow: 0 3px 5px #CCC;
   -ms-box-shadow: 0 3px 5px #CCC;
   box-shadow: 0 3px 5px #CCC;
+}
+
+/* The download button is special */
+#download {
+  height: 60px !important;
+  width: 140px !important;
+  padding-left: 3% !important;
+  padding-top: 2% !important;
+  margin-top: 18px !important;
+  margin-left: 8px !important;
+  margin-right: 8px !important;
 }
 
 /*************
@@ -165,6 +170,28 @@ body {
   margin-right: auto;
   text-align: left;
   font-size: 12pt;
+}
+
+
+.linenums li {
+    list-style-type: decimal !important;
+}
+
+#get-started {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  border-radius: 10px 10px 10px 10px;
+  height: 60px;
+  width: 200px;
+}
+
+.profile {
+  border-radius: 50%;
 }
 
 /************
