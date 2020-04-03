@@ -205,13 +205,15 @@ pkg body Package_Name {
 -- Declares and modifies Ints
 --
 proc Main: -- In Ada++ "is" can now be replaced with a colon
+
   -- Variable declarations
   A, B : Int_32 := 0;
   C    : Int_32 := 100;
   D    : Int_32;
 {
-  -- Ada++ will support a "++" "-1" and "+1" operators in coming revisions.
+  -- Ada++ will support for "++" "-1" and "+1" operators in coming revisions.
   A := A + 1; -- ++ operator coming soon!
+  
   -- Regular addition
   D := A + B + C;
 }
@@ -272,7 +274,7 @@ public class Main {
 <pre class="prettyprint linenums lang-adapp">
 if Variable > 0 {
   Put_Line (" > 0");
-elsif Variable < 0: -- NOTE: Colon syntax not supported yet (currently '{' or 'then' is allowed
+elsif Variable < 0: -- NOTE: Colon syntax not supported yet (currently '{' or 'then' is allowed)
   Put_Line (" < 0");
 else
   Put_Line (" = 0");
