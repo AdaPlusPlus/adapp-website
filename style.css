@@ -66,7 +66,7 @@ body {
   }
 
   /* Disable the download button and footer, since we just don't have room */
-  .mobile #download-container {
+  .mobile #header .button.download {
     visibility: hidden;
   }
 
@@ -143,47 +143,15 @@ body {
   box-shadow: 0 3px 5px #CCC;
 }
 
-#download-container {
-  display: flex;
-  justify-content: center;
-  margin-left: 5px;
-}
-
+/* The download button is special */
 #download {
-  display: flex;
-  margin-top: 18px;
-  margin-bottom: 18px;
-  margin-left: auto;
-  margin-right: auto;
-}
-#download .button {
-  display: flex;
-  height: 60px;
-  width: 140px;
-  padding-top: 0;
-  margin-left: 0;
-}
-
-#get-started-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-#get-started {
-  margin-top: 25px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#get-started .button {
-  display: flex;
-  height: 60px;
-  width: 200px;
-  border-radius: 10px 10px 10px 10px;
-  text-align:center;
-  align-items: center;
-  justify-content: center;
+  height: 60px !important;
+  width: 140px !important;
+  padding-left: 3% !important;
+  padding-top: 2% !important;
+  margin-top: 18px !important;
+  margin-left: 8px !important;
+  margin-right: 8px !important;
 }
 
 /*************
@@ -202,6 +170,19 @@ body {
 
 .linenums li {
   list-style-type: decimal !important;
+}
+
+#get-started {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  border-radius: 10px 10px 10px 10px;
+  height: 60px;
+  width: 200px;
 }
 
 .profile {
