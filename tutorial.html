@@ -48,6 +48,8 @@
     <li><a href="#packages">Packages</a></li>
     <li><a href="#control-statements">Control Statements</a></li>
     <li><a href="#conditions">Conditions</a></li>
+    <li><a href="#loops">Loops</a></li>
+    <li><a href="#structures">Structures</a></li>
   </ol>
 </div>
 
@@ -213,8 +215,9 @@ proc Main: -- In Ada++ "is" can now be replaced with a colon
   C    : Int_32 := 100;
   D    : Int_32;
 {
-  -- Support for "++" "-1" and "+1" operators coming in future updates
-  A := A + 1; -- ++ operator coming soon!
+  A++;
+  A-1;
+  A+1;
   
   -- Regular addition
   D := A + B + C;
@@ -232,6 +235,7 @@ int main (int argc, const char* argv[]) {
 
   // C++ shorthand for incrementation
   a++;
+  a--;
 
   // Regular addition
   d = a + b + c;
@@ -251,6 +255,7 @@ public class Main {
 
     // Java shorthand for incrementation
     a++;
+    a--
 
     // Regular addition
     d = a + b + c;
@@ -276,7 +281,7 @@ public class Main {
 <pre class="prettyprint linenums lang-adapp">
 if Variable > 0 {
   Put_Line (" > 0");
-elsif Variable < 0: -- NOTE: Colon syntax not supported yet (currently '{' or 'then' is allowed)
+elsif Variable < 0:
   Put_Line (" < 0");
 else
   Put_Line (" = 0");
@@ -311,9 +316,168 @@ if (Variable > 0) {
     terms only as necessary, and & and | will unconditionally evaluate all terms. In Ada++, and 
     and or will evaluate all terms; and then and or else direct the compiler to employ short circuit 
     evaluation.
+
+    Here are what switch/case statements look like:
   </p>
+
+  <h4>Ada++</h4>
+<pre class="prettyprint linenums lang-adapp">
+case Variable:
+  when 0      => Put_Line ("Zero");
+  when 1 .. 9 => Put_Line ("Positive Digit");
+  when 10 | 12 | 14 | 16 | 18 =>
+    Put_Line ("Even Number between 10 and 18");
+  when others => Put_Line ("Something else");
+}
+</pre>
+
+  <h4>C++</h4>
+<pre class="prettyprint linenums lang-cpp">
+switch (Variable) {
+  case 0:
+    cout << "Zero" << endl;
+    break;
+  case 1: case 2: case 3: case 4: case 5:
+  case 6: case 7: case 8: case 9: 
+    cout << "Positive Digit" << endl;
+    break;
+  case 10: case 12: case 14: case 16: case 18:
+    cout << "Even Number between 10 and 18" << endl;
+    break;
+  default:
+    cout << "Something else";
+}
+</pre>
+
+  <h4>Java</h4>
+<pre class="prettyprint linenums lang-java">
+switch (Variable) {
+  case 0:
+    System.out.println ("Zero");
+    break;
+  case 1: case 2: case 3: case 4: case 5:
+  case 6: case 7: case 8: case 9: 
+    System.out.println ("Positive Digit");
+    break;
+  case 10: case 12: case 14: case 16: case 18:
+    System.out.println ("Even Number between 10 and 18");
+    break;
+  default:
+    System.out.println ("Something else");
+}
+</pre>
+
+    <p>
+In Ada++, the case and end case lines surround the whole case statement, and each case starts with when.  So, when programming in Ada++, replace switch with case, and replace case with when. Case statements in Ada++ require the use of discrete types (integers or enumeration types), and require all possible cases to be covered by when statements.  If not all the cases are handled, or if duplicate cases exist, the program will not compile. The default case, default: in C++ and Java, can be specified usingwhen others => in Ada++. In Ada++, the break instruction is implicit and program execution will never fall through to subsequent cases.  In order to combine cases, you can specify ranges using..and enumerate disjoint values using | which neatly replaces the multiple case statements seen in the C++ and Java versions.
+     </p>
+
 </div>
+
+<!-- Section ---------------------------------------------------------------------------------------------------------->
+
+<div class="section">
+  <h2 id="loops"> Loops </h2>
+  <hr>
 <br/>
+
+    <p>
+Ada++’s for loop, however, is quite different from that in C++ and Java. It always increments or decrements a loop index within a discrete range. The loop index (or “loop parameter” in Ada++ parlance) is local to the scope of the loop and isimplicitly incremented or decremented at each iteration of the loop statements; the program cannot directly modify itsvalue. The type of the loop parameter is derived from the range. The range is always given in ascending order even if the loop iterates in descending order. If the starting bound is greater than the ending bound, the interval is considered to be empty and the loop contents will not be executed. To specify a loop iteration in decreasing order, use the reverse reserved word. Here are examples of loops going in both directions
+     </p>
+
+  <h4>Ada++</h4>
+<pre class="prettyprint linenums lang-adapp">
+--  Outputs 0, 1, 2, ..., 9
+for Variable in 0 .. 9 {
+  Put_Line (Variable'Img);
+}
+
+--  Outputs 9, 8, 7, ..., 0
+for Variable in reverse 0 .. 9 {
+  Put_Line (Variable'Img);
+}
+</pre>
+
+  <h4>C++</h4>
+<pre class="prettyprint linenums lang-cpp">
+//  Outputs 0, 1, 2, ..., 9
+for (int Variable = 0; Variable <= 9; Variable++) {
+  cout << Variable << endl;
+}
+
+//  Outputs 9, 8, 7, ..., 0
+for (int Variable = 9; Variable >=0; Variable--) {
+  cout << Variable << endl;
+}
+</pre>
+
+  <h4>Java</h4>
+<pre class="prettyprint linenums lang-java">
+//  Outputs 0, 1, 2, ..., 9
+for (int Variable = 0; Variable <= 9; Variable++) {
+  System.out.println (Variable);
+}
+
+//  Outputs 9, 8, 7, ..., 0
+for (int Variable = 9; Variable >=0; Variable--) {
+  System.out.println (Variable);
+}
+</pre>
+
+   <p>
+Ada++ uses the Integer type’s ‘Image attribute to convert a numerical value to a String.  There is no implicit conversion between Integer and String as there is in C++ and Java. We’ll have a more in-depth look at such attributes later on. It’s easy to express iteration over the contents of a container (for instance, an array, a list, or a map) in Ada++ and Java. For example, assuming that Int_List is defined as an array of Integer values, you can use:
+    </p>
+
+
+  <h4>Ada++</h4>
+<pre class="prettyprint linenums lang-adapp">
+for I of Int_List {
+  Put_Line (I'Img);
+}
+</pre>
+
+  <h4>Java</h4>
+<pre class="prettyprint linenums lang-java">
+for (int i : Int_List) {
+  System.out.println (i);
+}
+</pre>
+
+
+
+<!-- Section ---------------------------------------------------------------------------------------------------------->
+
+<div class="section">
+  <h2 id="structure"> Structures </h2>
+  <hr>
+<br/>
+  <h4>Ada++</h4>
+
+<pre class="prettyprint linenums lang-adapp">
+type Vec3 : rec {
+  X, Y, Z : Int_32;
+}
+
+Obj_A, Obj_B : Vec3;
+</pre>
+
+  <h4>C++</h4>
+<pre class="prettyprint linenums lang-cpp">
+struct Vec3 {
+  int X, Y, Z;
+} Obj_A,  Obj_B;
+</pre>
+
+  <h4>Java</h4>
+<pre class="prettyprint linenums lang-java">
+@Struct
+public static class Vec3 {
+  public int x, y, z;
+}
+
+Vec3 Obj_A = new Vec3();
+Vec3 Obj_B = new Vec3():
+</pre>
+
 
 <br/>
 <br/>
